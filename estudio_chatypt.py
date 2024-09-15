@@ -118,6 +118,7 @@ numeros = [3, 5, 7, 2, 8, -1, 4, 10, 12]
 print(encontrar_mayor(numeros))  # Se pasa 'numeros' como argumento a 'lista'
 
 """
+"""
 def mayor(lista):
     num_mayor = lista[0]
     for i in lista:
@@ -127,7 +128,7 @@ def mayor(lista):
 
 numeros = [2,5,15,-56,12,95]
 print(mayor(numeros))
-
+"""
 
 
 def fibonacci(n):
