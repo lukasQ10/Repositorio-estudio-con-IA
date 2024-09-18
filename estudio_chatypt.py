@@ -130,25 +130,3 @@ numeros = [2,5,15,-56,12,95]
 print(mayor(numeros))
 """
 
-
-def fibonacci(n):
-    lista = []
-    a,b = 0,1
-    for _ in range(n):
-        lista.append(a)
-        a,b = b, a+b
-    return lista
-
-print(fibonacci(20))    
-
-
-
-def suma_positivos(n):
-    suma = 0
-    for i in n:
-        if i > 0:
-            suma += i
-    return suma            
-
-lista_numeros = [1,15,-45,-10,25,-4,25]
-print(suma_positivos(lista_numeros))

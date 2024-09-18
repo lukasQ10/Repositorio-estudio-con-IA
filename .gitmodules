@@ -1,0 +1,3 @@
+[submodule "sub-repositorio-estudio"]
+	path = sub-repositorio-estudio
+	url = https://github.com/lukasQ10/Estudio-ChatYPT.git
