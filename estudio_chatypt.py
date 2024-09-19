@@ -106,7 +106,7 @@ print(fibo(10))
 
 # PROGRAMA QUE RECORRE UNA LISTA Y MUESTRA CUAL ES EL NUMERO MAYOR DE TODA LA LISTA
 
-"""
+
 def encontrar_mayor(lista):  # 'lista' es un parámetro genérico
     num_mayor = lista[0]         # num_mayor es igual al primer numero de la lista 'numeros' osea el '3'
     for i in lista:        # Recorremos la lista y guardamos en 'i'
@@ -117,8 +117,8 @@ def encontrar_mayor(lista):  # 'lista' es un parámetro genérico
 numeros = [3, 5, 7, 2, 8, -1, 4, 10, 12]
 print(encontrar_mayor(numeros))  # Se pasa 'numeros' como argumento a 'lista'
 
-"""
-"""
+
+
 def mayor(lista):
     num_mayor = lista[0]
     for i in lista:
@@ -128,5 +128,4 @@ def mayor(lista):
 
 numeros = [2,5,15,-56,12,95]
 print(mayor(numeros))
-"""
 
