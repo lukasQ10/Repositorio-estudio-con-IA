@@ -129,3 +129,19 @@ def mayor(lista):
 numeros = [2,5,15,-56,12,95]
 print(mayor(numeros))
 
+
+# PROGRAMA QUE PIDE NOMBRE AL USUARIO, CALCULE SU EDAD A PARTIR FECHA NACIMIENTO, 
+# IMPRIME MENSAJE CON SU NOMBRE Y EDAD
+# Y VERIFIQUE SI ES MAYOR DE EDAD Y MUESTRE UN MENSAJE ADECUADO.
+
+from datetime import date
+
+nombre = input("Ingrese su nombre por favor: ")
+fecha_nacimiento = int(input("Ingrese fecha nacimiento sin puntos ni comas comenzando por el año, mes y día: "))
+def datos (nombre, fecha_nacimiento):
+    fecha_actual = date.today()
+    if fecha
+    
+
+
+
