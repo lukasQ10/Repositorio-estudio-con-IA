@@ -133,7 +133,7 @@ print(mayor(numeros))
 # PROGRAMA QUE PIDE NOMBRE AL USUARIO, CALCULE SU EDAD A PARTIR FECHA NACIMIENTO, 
 # IMPRIME MENSAJE CON SU NOMBRE Y EDAD
 # Y VERIFIQUE SI ES MAYOR DE EDAD Y MUESTRE UN MENSAJE ADECUADO.
-
+"""
 from datetime import date
 
 nombre = input("Ingrese su nombre por favor: ")
@@ -142,6 +142,6 @@ def datos (nombre, fecha_nacimiento):
     fecha_actual = date.today()
     if fecha
     
-
+"""
 
 
