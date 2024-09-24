@@ -107,6 +107,7 @@ print(fibo(10))
 # PROGRAMA QUE RECORRE UNA LISTA Y MUESTRA CUAL ES EL NUMERO MAYOR DE TODA LA LISTA
 
 
+"""
 def encontrar_mayor(lista):  # 'lista' es un parámetro genérico
     num_mayor = lista[0]         # num_mayor es igual al primer numero de la lista 'numeros' osea el '3'
     for i in lista:        # Recorremos la lista y guardamos en 'i'
@@ -117,8 +118,9 @@ def encontrar_mayor(lista):  # 'lista' es un parámetro genérico
 numeros = [3, 5, 7, 2, 8, -1, 4, 10, 12]
 print(encontrar_mayor(numeros))  # Se pasa 'numeros' como argumento a 'lista'
 
+"""
 
-
+"""
 def mayor(lista):
     num_mayor = lista[0]
     for i in lista:
@@ -129,19 +131,32 @@ def mayor(lista):
 numeros = [2,5,15,-56,12,95]
 print(mayor(numeros))
 
-
+"""
 # PROGRAMA QUE PIDE NOMBRE AL USUARIO, CALCULE SU EDAD A PARTIR FECHA NACIMIENTO, 
 # IMPRIME MENSAJE CON SU NOMBRE Y EDAD
 # Y VERIFIQUE SI ES MAYOR DE EDAD Y MUESTRE UN MENSAJE ADECUADO.
-"""
-from datetime import date
 
-nombre = input("Ingrese su nombre por favor: ")
-fecha_nacimiento = int(input("Ingrese fecha nacimiento sin puntos ni comas comenzando por el año, mes y día: "))
-def datos (nombre, fecha_nacimiento):
-    fecha_actual = date.today()
-    if fecha
+# Importar el modulo para fecha actual y trabajar con fechas
+from datetime import datetime
+
+# Obtener la fecha actual
+fecha_actual = datetime.now()
+
+# Pedir la fecha de nacimiento al usuario y nombre
+nombre = input("Ingresa tu nombre: ").capitalize()()
+fecha_nacimiento = input("Ingresa tu fecha de nacimiento (DD-MM-YYYY): ")
+# convertir la entrada del usuario en objeto datetime
+fecha_nacimiento = datetime.strptime(fecha_nacimiento, "%d-%m-%Y")
+
+# Calcular la edad
+edad = fecha_actual.year - fecha_nacimiento.year
+
+# Ajustar si aún no ha pasado el cumpleaños este año
+if (fecha_actual.month, fecha_actual.day) < (fecha_nacimiento.month, fecha_nacimiento.day):
+    edad -= 1
+
+# Mostrar la edad
+print(f"{nombre } tienes {edad} años.")
+
     
-"""
-
 # Hola este es un mensaje de prueba para ver como se crea un commit desde vscode
