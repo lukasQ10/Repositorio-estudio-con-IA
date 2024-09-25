@@ -132,7 +132,7 @@ numeros = [2,5,15,-56,12,95]
 print(mayor(numeros))
 
 """
-# PROGRAMA QUE PIDE NOMBRE AL USUARIO, CALCULE SU EDAD A PARTIR FECHA NACIMIENTO, 
+# PROGRAMA QUE PIDE NOMBRE AL USUARIO, CALCULE SU EDAD A PARTIR FECHA NACIMIENTO
 # IMPRIME MENSAJE CON SU NOMBRE Y EDAD
 # Y VERIFIQUE SI ES MAYOR DE EDAD Y MUESTRE UN MENSAJE ADECUADO.
 
@@ -143,7 +143,7 @@ from datetime import datetime
 fecha_actual = datetime.now()
 
 # Pedir la fecha de nacimiento al usuario y nombre
-nombre = input("Ingresa tu nombre: ").capitalize()()
+nombre = input("Ingresa tu nombre: ").title()
 fecha_nacimiento = input("Ingresa tu fecha de nacimiento (DD-MM-YYYY): ")
 # convertir la entrada del usuario en objeto datetime
 fecha_nacimiento = datetime.strptime(fecha_nacimiento, "%d-%m-%Y")
