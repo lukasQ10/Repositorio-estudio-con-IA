@@ -132,6 +132,7 @@ numeros = [2,5,15,-56,12,95]
 print(mayor(numeros))
 
 """
+
 # PROGRAMA QUE PIDE NOMBRE AL USUARIO, CALCULE SU EDAD A PARTIR FECHA NACIMIENTO
 # IMPRIME MENSAJE CON SU NOMBRE Y EDAD
 # Y VERIFIQUE SI ES MAYOR DE EDAD Y MUESTRE UN MENSAJE ADECUADO.
@@ -144,19 +145,25 @@ fecha_actual = datetime.now()
 
 # Pedir la fecha de nacimiento al usuario y nombre
 nombre = input("Ingresa tu nombre: ").title()
-fecha_nacimiento = input("Ingresa tu fecha de nacimiento (DD-MM-YYYY): ")
+fecha_nacimiento = input("Ingresa tu fecha de nacimiento (Dia-Mes-año separados por el guión): ")
 # convertir la entrada del usuario en objeto datetime
 fecha_nacimiento = datetime.strptime(fecha_nacimiento, "%d-%m-%Y")
 
 # Calcular la edad
 edad = fecha_actual.year - fecha_nacimiento.year
 
-# Ajustar si aún no ha pasado el cumpleaños este año
+
+# si el mes y dia actual es menor al mes y dia de nacimiento, entonces la 
+# edad real es menor al calculo y se debe restar 1 año pues no ha cumplido el año completo
 if (fecha_actual.month, fecha_actual.day) < (fecha_nacimiento.month, fecha_nacimiento.day):
-    edad -= 1
+    edad -= 1 # <--- se resta un año para que tenga la verdadera edad
+    if edad < 18:
+        respuesta = "menor de edad"
+    else:
+        respuesta = "mayor de edad"    
 
 # Mostrar la edad
-print(f"{nombre } tienes {edad} años.")
+print(f"{nombre } tienes {edad} años y eres {respuesta}.")
 
     
 # Hola este es un mensaje de prueba para ver como se crea un commit desde vscode
