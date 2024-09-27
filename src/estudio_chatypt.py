@@ -157,13 +157,12 @@ edad = fecha_actual.year - fecha_nacimiento.year
 # edad real es menor al calculo y se debe restar 1 año pues no ha cumplido el año completo
 if (fecha_actual.month, fecha_actual.day) < (fecha_nacimiento.month, fecha_nacimiento.day):
     edad -= 1 # <--- se resta un año para que tenga la verdadera edad
-    if edad < 18:
-        respuesta = "menor de edad"
-    else:
-        respuesta = "mayor de edad"    
-
+    
+    respuesta = "menor de edad" if edad < 18 else "mayor de edad"
+    
 # Mostrar la edad
 print(f"{nombre } tienes {edad} años y eres {respuesta}.")
 
     
 # Hola este es un mensaje de prueba para ver como se crea un commit desde vscode
+# 
