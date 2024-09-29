@@ -163,6 +163,6 @@ if (fecha_actual.month, fecha_actual.day) < (fecha_nacimiento.month, fecha_nacim
 # Mostrar la edad
 print(f"{nombre } tienes {edad} años y eres {respuesta}.")
 
-    
+ 
 # Hola este es un mensaje de prueba para ver como se crea un commit desde vscode
 # cambio nueva rama
