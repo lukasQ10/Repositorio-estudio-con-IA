@@ -146,12 +146,16 @@ def calcular_fecha():
 
     # Pedir la fecha de nacimiento al usuario y nombre
     nombre = input("Ingresa tu nombre: ").title()
-    try:
-        fecha_nacimiento = input("Ingresa tu fecha de nacimiento (Dia-Mes-año separados por el guión): ")
-    except Exception:
-        print("Fecha de nacimiento invalida; ingresela conforme a la indicación anterios dada ..")
-    # convertir la entrada del usuario en objeto datetime
-    fecha_nacimiento = datetime.strptime(fecha_nacimiento, "%d-%m-%Y")
+    nombre = ' '.join(nombre.split())
+    while True:
+        try:
+            fecha_nacimiento = input("Ingresa tu fecha de nacimiento (Dia-Mes-año separados por el guión): ")
+            # convertir la entrada del usuario en objeto datetime
+            fecha_nacimiento = datetime.strptime(fecha_nacimiento, "%d-%m-%Y")
+            break
+            
+        except ValueError:
+            print("Fecha de nacimiento invalida; ingresela conforme a la indicación dada ..")
 
     # Calcular la edad
     edad = fecha_actual.year - fecha_nacimiento.year
