@@ -175,7 +175,5 @@ def calcular_fecha():
 if __name__ == '__main__': 
     calcular_fecha()
 
-
-
-
+    
     
