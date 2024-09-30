@@ -140,29 +140,38 @@ print(mayor(numeros))
 # Importar el modulo para fecha actual y trabajar con fechas
 from datetime import datetime
 
-# Obtener la fecha actual
-fecha_actual = datetime.now()
+def calcular_fecha():
+    # Obtener la fecha actual
+    fecha_actual = datetime.now()
 
-# Pedir la fecha de nacimiento al usuario y nombre
-nombre = input("Ingresa tu nombre: ").title()
-fecha_nacimiento = input("Ingresa tu fecha de nacimiento (Dia-Mes-año separados por el guión): ")
-# convertir la entrada del usuario en objeto datetime
-fecha_nacimiento = datetime.strptime(fecha_nacimiento, "%d-%m-%Y")
+    # Pedir la fecha de nacimiento al usuario y nombre
+    nombre = input("Ingresa tu nombre: ").title()
+    try:
+        fecha_nacimiento = input("Ingresa tu fecha de nacimiento (Dia-Mes-año separados por el guión): ")
+    except Exception:
+        print("Fecha de nacimiento invalida; ingresela conforme a la indicación anterios dada ..")
+    # convertir la entrada del usuario en objeto datetime
+    fecha_nacimiento = datetime.strptime(fecha_nacimiento, "%d-%m-%Y")
 
-# Calcular la edad
-edad = fecha_actual.year - fecha_nacimiento.year
+    # Calcular la edad
+    edad = fecha_actual.year - fecha_nacimiento.year
 
 
-# si el mes y dia actual es menor al mes y dia de nacimiento, entonces la 
-# edad real es menor al calculo y se debe restar 1 año pues no ha cumplido el año completo
-if (fecha_actual.month, fecha_actual.day) < (fecha_nacimiento.month, fecha_nacimiento.day):
-    edad -= 1 # <--- se resta un año para que tenga la verdadera edad
+    # si el mes y dia actual es menor al mes y dia de nacimiento, entonces la 
+    # edad real es menor al calculo y se debe restar 1 año pues no ha cumplido el año completo
+    if (fecha_actual.month, fecha_actual.day) < (fecha_nacimiento.month, fecha_nacimiento.day):
+        edad -= 1 # <--- se resta un año para que tenga la verdadera edad
+        
+        respuesta = "menor de edad" if edad < 18 else "mayor de edad"
+        
+    # Mostrar la edad
+    print(f"{nombre } tienes {edad} años y eres {respuesta}.")
+
+
+if __name__ == '__main__': 
+    calcular_fecha()
+
+
+
+
     
-    respuesta = "menor de edad" if edad < 18 else "mayor de edad"
-    
-# Mostrar la edad
-print(f"{nombre } tienes {edad} años y eres {respuesta}.")
-
- 
-# Hola este es un mensaje de prueba para ver como se crea un commit desde vscode
-# cambio nueva rama
