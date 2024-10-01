@@ -55,18 +55,6 @@ print(suma_positivos(lista))  # Output: 9
 print(fibonacci(10))
 """
 
-"""
-def fibonacci(n):
-    a,b = 0, 1
-    lista_vacia = []
-    for _ in range(n):
-        lista_vacia.append(a)
-        a,b = b, a+b # <---- esta parte a que linea actualiza a la segunda linea de codigo arriba? ya que append solo agreda a 'a' y no a 'b'
-    return lista_vacia
-
-print(fibonacci(15))
-"""    
-
 
 
 """
