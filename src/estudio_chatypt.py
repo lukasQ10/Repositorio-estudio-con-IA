@@ -155,7 +155,12 @@ def calcular_fecha():
             break
             
         except ValueError:
-            print("Fecha de nacimiento invalida; ingresela conforme a la indicación dada ..")
+            print("Fecha de nacimiento invalida; ingresela conforme a la indicación dada..")
+            
+        except TypeError as e:
+            print("Haz ingresado letras en lugar de numeros; ingresela conforme a la indicación dada..")
+            
+    print("Haz ingresado correctamente!")    
 
     # Calcular la edad
     edad = fecha_actual.year - fecha_nacimiento.year
