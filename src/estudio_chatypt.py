@@ -126,6 +126,7 @@ print(mayor(numeros))
 # Y VERIFIQUE SI ES MAYOR DE EDAD Y MUESTRE UN MENSAJE ADECUADO.
 
 # Importar el modulo para fecha actual y trabajar con fechas
+"""
 from datetime import datetime
 
 def calcular_fecha():
@@ -167,11 +168,17 @@ def calcular_fecha():
 
 if __name__ == '__main__': 
     calcular_fecha()
+"""  
     
-    
+print(f"El valor de __name__ = {__name__}")
 
 
 
+def prueba():
+    print("codigo controlado")
+    
+print("codigo fuera de control")
 
-    
-    
+if __name__ == '__main__':
+    prueba()
+    print("codigo fuera de control")    
