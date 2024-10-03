@@ -126,7 +126,7 @@ print(mayor(numeros))
 # Y VERIFIQUE SI ES MAYOR DE EDAD Y MUESTRE UN MENSAJE ADECUADO.
 
 # Importar el modulo para fecha actual y trabajar con fechas
-"""
+
 from datetime import datetime
 
 def calcular_fecha():
@@ -153,6 +153,7 @@ def calcular_fecha():
 
     # Calcular la edad
     edad = fecha_actual.year - fecha_nacimiento.year
+    respuesta = ""
 
 
     # si el mes y dia actual es menor al mes y dia de nacimiento, entonces la 
@@ -162,23 +163,16 @@ def calcular_fecha():
         
         respuesta = "menor de edad" if edad < 18 else "mayor de edad"
         
+    
+        
     # Mostrar la edad
     print(f"{nombre } tienes {edad} años y eres {respuesta}.")
 
 
 if __name__ == '__main__': 
     calcular_fecha()
-"""  
+
     
-print(f"El valor de __name__ = {__name__}")
 
 
 
-def prueba():
-    print("codigo controlado")
-    
-print("codigo fuera de control")
-
-if __name__ == '__main__':
-    prueba()
-    print("codigo fuera de control")    
